@@ -1,0 +1,231 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+    margin: 0;
+}
+
+.box {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 360px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+
+
+
+
+
+.preview-container {
+    width: 100%;
+    height: 120px;
+    background: #e9ecef;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; 
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid #dee2e6;
+    overflow: hidden;
+}
+
+.preview-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #9ba3af;
+    font-weight: bold;
+    line-height: 1;
+    padding: 15px 0 0 15px; 
+    margin-bottom: 0;
+}
+
+.preview-icons {
+    display: flex;
+    flex: 1;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 50px;
+    padding-bottom: 0;
+    z-index: 2;
+}
+
+.preview-bg {
+    font-size: 55px;
+    line-height: 1;
+    display: block;
+    transition: filter 0.3s ease;
+    filter: blur(0px);
+    margin-bottom: 0;
+}
+
+
+.preview-subject {
+    font-size: 45px;
+    line-height: 1;
+    display: block;
+    filter: url(#motionBlurFilter);
+    margin-bottom: 0;
+}
+
+.preview-ground {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+}
+
+.ground-grass {
+    height: 8px;
+    background-color: #91B34A; 
+}
+
+.ground-dirt {
+    height: 25px;
+    background-color: #8B7355;
+}
+
+
+
+
+
+.field {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+    color: #666;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    outline: none;
+}
+
+.shutter-input-group {
+    display: flex;
+    gap: 8px;
+}
+
+.shutter-input-group input {
+    flex: 1;
+}
+
+#modeBtn {
+    width: 95px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    color: #777;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#modeBtn.active {
+    background: #ff4757;
+    color: white;
+    border-color: #ff4757;
+}
+
+.action-container {
+    display: flex;
+    gap: 10px;
+    margin: 25px 0;
+    align-items: stretch;
+}
+
+.calc-btn {
+    flex: 1;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.calc-btn:hover {
+    background: #000;
+}
+
+#result {
+    flex: 1.2;
+    background: #f1f1f1;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #444;
+    min-height: 60px;
+    transition: color 0.3s ease;
+}
+
+.info-box {
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    text-align: center;
+    display: none;
+    transition: all 0.3s ease;
+}
+
+#recommendBox {
+    background-color: #fff9db;
+    border-left: 5px solid #ffca28;
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: #d9480f;
+}
+
+#envBox {
+    background-color: #f1f3f5;
+    border-left: 5px solid #adb5bd;
+    color: #495057;
+    margin-top: 8px;
+}
+
+.env-title {
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.env-desc {
+    font-size: 0.75rem;
+    color: #868e96;
+}
+
+.hint {
+    font-size: 0.75rem;
+    color: #aaa;
+    margin-top: 5px;
+}

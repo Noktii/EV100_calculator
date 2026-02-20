@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV100 Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="box">
+    <h1>EV100 Calculator</h2>
+    
+	<div class="preview-container">
+        <div class="preview-label">Live Preview</div>
+        <div class="preview-icons">
+            <div id="bgScene" class="preview-bg">🌲</div>
+            <div id="subject" class="preview-subject">🏃</div>
+        </div>
+		<div class="preview-ground">
+			<div class="ground-grass"></div>
+			<div class="ground-dirt"></div>
+		</div>
+    </div>
+	
+    <div class="field">
+        <label for="iso">ISO 감도</label>
+        <input type="number" id="iso" value="100">
+    </div>
+
+    <div class="field">
+        <label for="aperture">조리개 (f-stop)</label>
+        <input type="number" id="aperture" step="0.1" value="2.8">
+    </div>
+
+    <div class="field">
+        <label for="shutter">셔터 스피드</label>
+        <div class="shutter-input-group">
+            <input type="text" id="shutter" value="125">
+            <button id="modeBtn" type="button">1초 이상 OFF</button>
+        </div>
+        <div id="hintText" class="hint">* n 입력 시 1/n초로 계산됩니다.</div>
+    </div>
+
+    <div class="action-container">
+        <button id="calcBtn" class="calc-btn" type="button">계산</button>
+        <div id="result">---</div>
+    </div>
+
+    <div id="recommendBox" class="info-box"></div>
+    
+    <div id="envBox" class="info-box">
+        <span class="env-title" id="envTitle"></span>
+        <span class="env-desc" id="envDesc"></span>
+    </div>
+</div>
+
+<svg style="position: absolute; height: 0; width: 0; overflow: hidden;">
+    <defs>
+        <filter id="motionBlurFilter">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="0 0" result="blur" id="motionBlurStdDev"/>
+        </filter>
+    </defs>
+</svg>
+
+<script src="script.js"></script>
+</body>
+</html>
